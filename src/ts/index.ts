@@ -1,19 +1,36 @@
 import {fibonacci} from "./fibonacci";
-import {breakSpeed, printCurrentSpeed, setSpeedLimitCallBack, speedUp} from "./auto";
+import {breakSpeed, printCurrentSpeed, setSpeedCallBack, setSpeedLimit, setSpeedLimitCallBack, speedUp} from "./auto";
+import {autoObject} from "./autoObject";
 
 
 console.log("It is working!");
 console.log("Neue Ausgabe")
 console.log("Neue Ausgabe 2")
 
-console.log(fibonacci(10))
+// setSpeedLimit(100)
+//
+// setSpeedCallBack(function (currentSpeed){
+//     console.log("aktuelle Geschwindigkeit: " + currentSpeed)
+// })
+//
+// setSpeedLimitCallBack(function (currentSpeed, limit) {
+//     console.log("Überschreitung: " + (currentSpeed - limit));
+//     breakSpeed(currentSpeed - limit)
+// })
+//
+//
+//
+//
+// speedUp(40);
+// speedUp(40);
+// speedUp(40);
 
-setSpeedLimitCallBack(function (currentSpeed) {
-    console.log("Überschreitung: " + (currentSpeed - 50));
-    breakSpeed(currentSpeed - 50)
+console.log(autoObject.currentSpeed)
+autoObject.setSpeedCallBack(function (currentSpeed) {
+    console.log("aktuelle Geschwindigkeit: " + currentSpeed)
 })
+autoObject.speedUp(50);
+console.log(autoObject.currentSpeed)
 
-speedUp(40);
-printCurrentSpeed();
-breakSpeed(5);
-printCurrentSpeed()
+autoObject.breakSpeed(50);
+console.log(autoObject.currentSpeed)
