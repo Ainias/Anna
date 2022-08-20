@@ -3,6 +3,7 @@
   "displayName": "HTML Lernen",
   "version": "0.0.1",
   "scripts": {
+    "run": "ts-node --esm src/ts/index.ts",
     "watch": "webpack",
     "prettier": "prettier --write 'src/**/*.js'",
     "prettier-list-different": "prettier --list-different 'src/**/*.(js|ts)'"
@@ -11,6 +12,7 @@
   "dependencies": {
   },
   "devDependencies": {
+    "ts-node": "^10.9.1",
     "prettier": "^2.3.2",
     "ts-loader": "^9.3.1",
     "webpack": "^5.74.0",

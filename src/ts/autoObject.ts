@@ -6,21 +6,20 @@ export const autoObject = {
     speedCallBack: undefined as undefined | AutoCallback,
     speedUp: function (value: number) {
         this.currentSpeed += value;
-        if (typeof this.speedCallBack !== "undefined"){
-            this.speedCallBack(this.currentSpeed)
+        if (typeof this.speedCallBack !== 'undefined') {
+            this.speedCallBack(this.currentSpeed);
         }
     },
     breakSpeed(value: number) {
         this.currentSpeed -= value;
-        if (typeof this.speedCallBack !== "undefined"){
-            this.speedCallBack(this.currentSpeed)
+        if (typeof this.speedCallBack !== 'undefined') {
+            this.speedCallBack(this.currentSpeed);
         }
     },
     printCurrentSpeed() {
-        console.log(this.currentSpeed)
+        console.log(this.currentSpeed);
     },
-    setSpeedCallBack(cb: AutoCallback){
-        this.speedCallBack = cb
-    }
-}
-
+    setSpeedCallBack(cb: AutoCallback) {
+        this.speedCallBack = cb;
+    },
+};
